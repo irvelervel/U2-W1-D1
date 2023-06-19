@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Images</title>
+    <style>
+      img {
+        /* con width: 100% rendiamo l'immagine grande SEMPRE quanto il suo contenitore (in questo caso la finestra) */
+        /* width: 100%; */
+
+        /* con max-width: 100% rendiamo l'immagine grande come il suo contenitore SOLAMENTE fino al raggiungimento
+        della dimensione nativa della sorgente */
+        max-width: 100%; /* --> max-width: 600px */
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <article>
+        <img src="https://placekitten.com/600" alt="cat picture" />
+      </article>
+    </main>
+  </body>
+</html>

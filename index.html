@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Media Queries & Responsive Design</title>
+    <style>
+      /* CSS GENERICO, APPLICATO SU TUTTI GLI SCHERMI, DA MOBILE IN SU */
+      #first,
+      #second {
+        width: 200px;
+        height: 200px;
+        border: 2px solid black;
+      }
+
+      #first {
+        margin-bottom: 2em;
+      }
+
+      /* ora applichiamo delle regole che verranno applicate su schermi via via più grandi,
+      in modo da evitare overlap e possibilmente lavorare solamente con min-width */
+
+      /* APPLICHIAMO DELLE REGOLE ON TOP, SOLO SU SCHERMI LARGHI ALMENO 391px */
+      @media screen and (min-width: 391px) {
+        #first {
+          background-color: red;
+        }
+
+        #second {
+          background-color: green;
+        }
+      }
+
+      /* APPLICHIAMO ANCORA ULTERIORI REGOLE SOLO SU SCHERMI LARGHI ALMENO 792px */
+      @media screen and (min-width: 792px) {
+        #first {
+          background-color: blue;
+        }
+
+        #second {
+          background-color: purple;
+        }
+      }
+
+      /* SOPRA I 1000px NASCONDIAMO I QUADRATI */
+      @media screen and (min-width: 1001px) {
+        #first,
+        #second {
+          visibility: hidden;
+        }
+      }
+
+      /* STILI DI STAMPA */
+      /* queste regole vengono ignorate da tutti i @media screen */
+      @media print {
+        #first,
+        #second {
+          width: 400px;
+          height: 400px;
+          border: 4px dotted black;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Impariamo ad usare le media queries :)</h1>
+      <article>
+        <!-- questi due quadrati verranno riempiti di colori diversi a seconda della larghezza dello schermo
+        utilizzato per il rendering della pagina -->
+        <div id="first"></div>
+        <div id="second"></div>
+      </article>
+    </main>
+  </body>
+</html>

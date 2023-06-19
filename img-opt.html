@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ottimizzazioni immagini</title>
+    <style>
+      #image {
+        width: 400px;
+        height: 400px;
+        background: url(https://placekitten.com/400);
+      }
+
+      @media screen and (min-width: 600px) {
+        #image {
+          background: url(https://placedog.net/400/400);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <article>
+        <div id="image"></div>
+      </article>
+    </main>
+  </body>
+</html>
